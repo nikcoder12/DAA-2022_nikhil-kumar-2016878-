@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int main()
 {
    int n;
@@ -15,11 +17,13 @@ int main()
    }
    //bubble sort
    int temp = 0;
+   int count = 0;
    for(int i =0;i<n;i++)
    { 
      temp = a[i];
      for(int j = i+1;j<n;++j)
      {
+       count++;
        if(a[i] > a[j])
        {
          a[i] = a[j];
@@ -32,5 +36,6 @@ int main()
    {
      printf("\n%d elment of array a is %d",i,a[i]);
    }
+   printf("total number of comparison: %d",count);
     return 0;
 }
